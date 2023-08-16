@@ -7,7 +7,7 @@ SELECT e.emp_no AS "Employee Number",
 		s.salary AS "Salary"
 FROM employees AS e
 LEFT JOIN salaries AS s
-	ON e.emp_no = s.emp_no
+	ON e.emp_no = s.emp_no;
 
 
 -- Task #2
@@ -17,7 +17,7 @@ SELECT 	e.last_name AS "Last Name",
 		e.hire_date AS "Hire Date"
 FROM employees as e
 WHERE hire_date >= '1986-01-01'
-		AND hire_date <= '1986-12-31'
+		AND hire_date <= '1986-12-31';
 		
 		
 -- Task #3
@@ -31,7 +31,7 @@ FROM departments as d
 INNER JOIN dept_manager AS dm
 	ON d.dept_no = dm.dept_no
 INNER JOIN employees AS e
-	ON dm.emp_no = e.emp_no
+	ON dm.emp_no = e.emp_no;
 
 
 -- Task #4
@@ -45,7 +45,7 @@ FROM departments AS d
 INNER JOIN dept_emp AS de
 	ON d.dept_no = de.dept_no
 INNER JOIN employees AS e
-	ON de.emp_no = e.emp_no
+	ON de.emp_no = e.emp_no;
 
 
 -- Task #5
@@ -55,7 +55,7 @@ SELECT first_name AS "First Name",
 		sex AS "Sex/Gender"
 FROM employees
 WHERE first_name = 'Hercules'
-AND last_name LIKE 'B%'
+AND last_name LIKE 'B%';
 
 
 -- Task #6
@@ -75,7 +75,7 @@ where emp_no IN
 		FROM departments
 			where dept_name = 'Sales'
 		)
-	)
+	);
 
 
 -- Task #7
@@ -109,11 +109,11 @@ WHERE de.emp_no IN
 			WHERE d.dept_name = 'Sales'
 			OR d.dept_name = 'Development'
 		)
-	)
+	);
 	
 -- Task #8
 -- List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 SELECT last_name, COUNT(last_name) AS "Frequency of Occurance"
 FROM employees
 GROUP BY last_name
-Order By "Frequency of Occurance" DESC
+Order By "Frequency of Occurance" DESC;

@@ -1,6 +1,6 @@
 # SQL-Challenge
 ### Completed 8-16-23
-#### The exercises in this challenge where completed in partnership with David Pinsky.
+#### The exercises in this challenge were completed in partnership with David Pinsky.
 
 ## DATA MODELING
 - The attached .png is a diagram of the tables used in this challenge and their corresponding PK and FK connections. Composite Keys were used where applicable.
